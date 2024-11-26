@@ -1,0 +1,389 @@
+@import url("https://use.typekit.net/vfw6aqb.css");
+@import url("https://use.typekit.net/xam5wlb.css");
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+}
+
+html {
+    
+    scroll-behavior: smooth;
+    width: fit-content;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(162, 164, 170, 0.571);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #274770;
+    border-radius: 6px;
+}
+
+body {
+ background-color: rgb(239, 239, 247);
+ scrollbar-width: 20px;
+ width: 100%;
+ overflow-x: hidden;
+
+
+}
+
+/* loading animation */
+
+/* Style pour le loader */
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: white; /* Vous pouvez changer la couleur de fond */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Assurez-vous que cela couvre le reste de la page */
+  }
+  
+  #loading img {
+    width: 100px; /* Taille du logo */
+    animation: grow 2s linear infinite; /* Animation de rotation, optionnelle */
+  }
+  
+  @keyframes grow {
+    0% {
+      transform: scale(2);
+    }
+    50% {
+      transform: scale(2.2);
+    }
+    100% {
+      transform: scale(2);
+    }
+  }
+  
+  
+  /* Masquer le loader lorsque la page est prête */
+  body.loading {
+    overflow: hidden; /* Désactiver le scroll pendant le chargement */
+  }
+  
+  body.loaded #loading {
+    display: none;
+  }
+
+  /* navbar */
+
+#menu-toggle {
+
+    display: none;
+}
+
+header {
+    display: flex;
+    position: sticky;
+    background-color: white;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+}
+
+header::before {
+    content: url('ndop.webp');
+    position: absolute;
+    margin-bottom: 6060px;
+    left: 0;
+    height: 10px;
+    width: 100%;
+}
+
+nav {
+
+    display: flex;
+    width: 100%;
+    font-family: 'akagi-pro', 'sans-serif';
+}
+
+.logo {
+
+    display: flex;
+    margin-left: 10px;
+    align-items: center;
+    padding-top: 20px;
+    
+}
+
+.logo a {
+    font-weight: 800;
+    font-size: 40px;
+    background-image: url(ndop.webp);
+    background-size: contain;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.Ebong_nav ul {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items:  center;
+    width: 40%;
+    height: 100%;
+    margin: 20px;
+
+}
+
+.Ebong_nav ul li {
+
+    display: flex;
+    width: 50px-;
+    margin: 20px;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.Ebong_nav ul li a {
+
+    font-weight: 700;
+    width: 100%;
+    color: #274770;
+    text-align: center;
+    font-size: 15px;
+    transition: text-decoration-color 1.3s ease, text-decoration-thickness 0.3s ease;
+
+}
+
+.Ebong_nav ul li a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #E8E5DF;
+    color: #426593;
+}
+
+
+/* debut main part */
+
+main a {
+
+    color: #274770;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 15px;
+    padding-top: 15px;
+}
+
+main img {
+
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+}
+
+main a:hover {
+
+    color: #2b04db;
+ 
+}
+
+h1 {
+
+    margin: 50px 100px;
+    color: #274770;
+}
+
+.grid_container1, .grid_container2 {
+    margin: 0px 20px 0px 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    width: fit-content;
+}
+
+#file1, #file2, #file3, #file4, #file5, #file6,#file7 {
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* pop up personnalisé  */
+
+.hidden {
+    display: none;
+    visibility: hidden;
+  }
+  
+  #custom-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    font-family: 'akagi-pro', 'sans-serif';
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 50%;
+  }
+  
+  .popup-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #confirm-yes {
+    background-color: #4caf50;
+    color: white;
+    width: 70%;
+  }
+  
+  #confirm-no {
+    background-color: #f44336;
+    color: white;
+    width: 70%;
+  }
+  
+  /* footer */
+
+  footer {
+
+    font-weight: 200;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-style: italic;
+    height: 200px;
+
+  }
+
+
+
+
+  /* responsive part */
+
+  @media (max-width: 1050px) {
+    #menu-toggle {
+      display: block; 
+      background-color: transparent;
+      width: 50px; /* Augmenter la taille */
+    height: 100px;
+      margin-right: 20px;
+      border: none;max-width: 20%;
+    }
+  
+    .Ebong_nav ul {
+        position: fixed;
+        top: 90px; /* En dessous de la navbar */
+        right: -100%; /* Caché sur la droite */
+        width: 200px;
+        height: calc(100% - 60px); /* Hauteur sous la navbar */
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        margin: 10px;
+      }
+
+
+    
+      .Ebong_nav ul.open {
+       right: 0; /* Fait apparaître le menu */
+       margin: 0;
+       padding: 0;
+      }
+
+      .Ebong_nav li {
+
+        height: 50%;
+      }
+
+      .Ebong_nav ul li a {
+        display: block;
+        padding: 20px 20px;
+        margin-top: 20px;
+        width: 100%; /* Lien sur toute la largeur */
+        height: 50%;
+        text-align: left;
+      }
+    
+      .Ebong_nav ul li a:hover {
+        background-color: #274770;
+        color: white;
+        text-decoration: none;
+      }
+
+      h1 {
+
+        margin: 20px;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+
+
+      .grid_container1, .grid_container2 {
+        margin-left: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        width: fit-content;
+    }
+
+    main img {
+
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+    }
+    
+    main a {
+
+        color: #274770;
+        font-weight: 600;
+        font-style: italic;
+        font-size: 10px;
+        padding-top: 15px;
+    }
+
+    header::before {
+        display: none;
+    }
+
+    header {
+
+        width: 100%;
+    }
+
+  }
+  
